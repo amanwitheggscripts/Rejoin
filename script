@@ -1,8 +1,4 @@
-game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-    if State == Enum.TeleportState.Started then
-        syn.queue_on_teleport(" print('loaded') repeat wait() until game:IsLoaded() loadstring(game:HttpGet(('https://raw.githubusercontent.com/amanwitheggscripts/Rejoin/main/script'),true))()")
-    end
-end)
+syn.queue_on_teleport(" print('loaded') repeat wait() until game:IsLoaded() loadstring(game:HttpGet(('https://raw.githubusercontent.com/amanwitheggscripts/Rejoin/main/script'),true))()")
 game.Players.LocalPlayer.Chatted:Connect(function(Msg)
     Msg = string.lower(Msg)
     if string.sub(Msg, 0, string.len('/e rejoin')) == '/e rejoin' then --RejoinCommand
